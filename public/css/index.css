@@ -1,0 +1,71 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background: url("../imgs/index.jpg") no-repeat;
+	background-color:rgba(0,0,0,1);
+
+	background-position: center center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed; 
+
+    background-size: cover;
+
+
+
+}
+nav{
+	
+	height:100px;
+	color:rgb(205,242,227);
+	font-size:50px;
+	text-shadow:11px 5px 20px #000;
+	line-height:100px;
+	text-align:center;
+	
+	
+}
+#zong {
+	background-color:rgba(0,0,0,0.5);
+	color:#fff;
+	width:600px;
+	height:630px;
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+}
+#zong p{
+	text-align:center;
+	margin:center;
+	font-size:50px;
+	margin-bottom:100px;
+}
+.join{
+	margin-bottom:30px;
+	
+}
+.join:hover{
+	background-color:#fff;
+	display:inline-block
+}
+.join a{
+	text-decoration:none;
+	font-size:30px;
+	
+}
+.join a:link{
+	color:#fff;
+}
+.join a:visited{
+	color:#fff;
+}
+.join a:hover{
+	color:#000;
+}
+

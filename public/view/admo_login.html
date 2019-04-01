@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>成绩查询</title>
+	<link rel="stylesheet" href="../css/join.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<style>
+
+	</style>
+</head>
+<body>
+	<div id="top">
+		<nav>管理员</nav>
+	</div>
+	<aside>
+		<div class="dian" id="div1">添加学生</div>
+		<div class="dian" id="div2">添加教师</div>
+		<div class="dian" id="div3">删除学生</div>
+		<div class="dian" id="div4">删除教师</div>
+	</aside>
+	<section>
+		<div id="adStudent" class="student">
+			请输入要添加学生的账号：<br/>
+			<input type="text"id="as_uname"><br/>
+			请输入要添加学生的密码：<br/>
+			<input type="password"id="as_upwd"><br/>
+			<button onclick="joinStu()">添加学生</button>
+		</div>
+		<div id="adTeacher" class="student">
+			请输入要添加教师的账号：<br/>
+			<input type="text"id="at_uname"><br/>
+			请输入要添加教师的密码：<br/>
+			<input type="password"id="at_upwd"><br/>
+			<button onclick="joinTea()">添加教师</button>
+		</div>
+		<div id="deStudent" class="student">
+			请输入要删除学生的账号：<br/>
+			<input type="text"id="ds_uname"><br/>
+			<button onclick="delStu()">删除学生</button>
+		</div>
+		<div id="deTeacher" class="student">
+			请输入要删除教师的编号：<br/>
+			<input type="text"id="dt_id"><br/>
+			<button onclick="delTea()">删除教师</button>
+		</div>
+	</section>
+</body>
+</html>
+<script src="../js/admo.js"></script>
+<script>
+	
+</script>

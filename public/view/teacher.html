@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>成绩查询</title>
+	<link rel="stylesheet" href="../css/teacher.css">
+	<style>
+	
+	</style>
+</head>
+<body>
+	<nav>
+		教师登录
+	</nav>
+	<div id="zong">
+	<div id="top">
+		教师
+	</div>
+		<table>
+			<tr>
+				<td>账号：</td>
+				<td><input id="uname" type="text" placeholder="请输入您的账号"></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input id="upwd" type="password" placeholder="请输入您的密码"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button onclick="login()">登录</button><button type="reset" onclick="reset()">重填</button></td>
+			</tr>
+		</table>	
+	</div>
+</body>
+</html>
+<script>
+	function reset(){
+		uname.value="";
+		upwd.value="";
+	}
+	function login(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				var data=xhr.responseText;
+				if(data=="1"){
+					alert("请填写账号");
+				}else if(data=="0"){
+					alert("请填写密码");
+				}else if(data=="2"){
+					alert("用户名或密码不正确");
+				}else if(data=="sec"){
+						window.location.href="./teacher_join.html";
+					}
+				
+			}
+		}
+
+		xhr.open("post","/cha/teacher_login",true);
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		var formdata="uname="+uname.value+"&upwd="+upwd.value;
+		xhr.send(formdata);
+	}
+</script>

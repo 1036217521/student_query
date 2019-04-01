@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>成绩查询</title>
+	<link rel="stylesheet" href="../css/teacher.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<style>
+	
+	</style>
+</head>
+<body>
+	<nav>
+		成绩查询
+	</nav>
+	<div id="zong">
+	<div id="top">
+		学生登录
+	</div>
+		<table>
+			<tr>
+				<td>学号：</td>
+				<td><input id="uname" type="text" placeholder="请输入您的学号"></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input id="upwd" type="password" placeholder="请输入您的密码"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button>登录</button><button>重填</button></td>
+			</tr>
+		</table>
+		
+	</div>
+</body>
+</html>
+
+<script>
+
+$("table tr:last>td>button:last").on("click",function(){
+	uname.value="";
+	upwd.value="";
+});
+
+$("table tr:last>td>button:first").on("click", function () {
+	document.cookie ="sname=" + uname.value+"&"+"spwd="+upwd.value;
+        $.ajax({
+            //对象语法:防止多个参数不确定有没有
+            url: "/cha/stu_login",
+            type: "post",
+            data: {
+                uname: uname.value,
+                upwd: upwd.value
+            },
+            //其实支持对象语法{属性:值,属性:值...}
+            dataType: "json" //如果服务端返回的是json字符串则可自动调用JSON.parse()将json字符串转为js数组或对象
+        }).then(function (data) {
+            // 注： jQuery3.x以上才支持promise
+            //then 会在收到的服务端的响应后自动执行
+            //形参result会自动接住服务端返回的数据
+            if (data == "1") {
+                alert("请填写账号");
+            } else if (data == "0") {
+                alert("请填写密码");
+            } else if (data == "2") {
+                alert("用户名或密码不正确");
+            } else if (data == "sec") {
+                window.location.href = "./admo_login_jq.html";
+            }
+        })
+    });
+</script>

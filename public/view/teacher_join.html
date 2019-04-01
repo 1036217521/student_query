@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>成绩查询</title>
+	<link rel="stylesheet" href="../css/join.css">
+	<link rel="stylesheet" href="../css/updata.css">
+	<script src="../js/teacher_join.js"></script>
+
+</head>
+
+<body>
+	<div id="top">
+		<nav>成绩查询</nav>
+	</div>
+	<aside>
+		<div class="dian" id="div1" onclick="show()">学生成绩查询</div>
+		<div class="dian" id="div2" onclick="showyin()">添加学生成绩</div>
+	</aside>
+	<section>
+		<div id="xian">
+			<p id="p1">请输入要查询学生的学号：</p>
+			<input id="uname" type="text">
+			<br />
+			<button id="btn" onclick="selStu()">查询</button>
+			<table id="tab">
+				<thead id="myhead"></thead>
+			</table>
+		</div>
+
+		<div id="yin">
+			<p id="pp">添加学生成绩</p>
+			<table>
+				<tr>
+					<td>学号</td>
+					<td><input id="stu_id" type="text" placeholder="请输入学生的学号"></td>
+				</tr>
+				<tr>
+					<td>姓名</td>
+					<td><input id="stu_name" type="text" placeholder="姓名"></td>
+				</tr>
+				<tr>
+					<td id="td1"></td>
+					<td> <input id="stu1" type="text" placeholder="请输入成绩"></td>
+				</tr>
+				<tr>
+					<td id="td2"></td>
+					<td><input id="stu2" type="text" placeholder="请输入成绩"></td>
+				</tr>
+				<tr>
+					<td id="td3"></td>
+					<td><input id="stu3" type="text" placeholder="请输入成绩"></td>
+				</tr>
+				<tr>
+					<td id="td4"></td>
+					<td> <input id="stu4" type="text" placeholder="请输入成绩"></td>
+				</tr>
+				<tr>
+					<td id="td5"></td>
+					<td> <input id="stu5" type="text" placeholder="请输入成绩"></td>
+				</tr>
+				<tr>
+					<td id="td6"></td>
+					<td> <input id="stu6" type="text" placeholder="请输入成绩"></td>
+				</tr>
+				<tr>
+					<td id="td7"></td>
+					<td><input id="stu7" type="text" placeholder="请输入成绩"></td>
+				</tr>
+			</table>
+			<button onclick="goscore()">提交</button>
+		</div>
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+
+#uname {
+    width: 200px;
+    height: 45px;
+    font-size: 30px;
+    color: black;
+    font-weight: bolder;
+    left:30%;
+}
+
+table {
+    margin: 0 auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+table td {
+    border: 1px solid black;
+    width: 200px;
+}
+#yin{
+    display: none;
+    position:absolute;
+    left: 37%;
+    top:16%;
+    text-align: center;
+}
+#yin p,input{
+    width: 400px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+#yin table input{
+    margin: 0;
+    width: 100px;
+    height: 25px;
+    font-size: 10px;
+}
+#pp{
+    font-size: 36px;
+}
+#p1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#btn{
+    width: 100px;
+    height: 47.5px;
+    font-size: 10px;
+    left: 55%;
+    margin-bottom: 30px;
+
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>成绩查询</title>
+	<link rel="stylesheet" href="../css/join.css">
+	<link rel="stylesheet" href="../css/updata.css">
+	<script src="../js/student_join.js"></script>
+
+</head>
+
+<body>
+	<div id="top">
+		<nav>教师</nav>
+	</div>
+	<aside>
+		<div class="dian" id="div1" onclick="show()">显示成绩</div>
+		<div class="dian" id="div2" onclick="showyin()">更改密码</div>
+	</aside>
+	<section>
+		<div id="xian">
+			<p id="p1"><span id="uname"></span>同学你好</p>
+			<table id="tab">
+				<thead id="myhead"></thead>
+			</table>
+		</div>
+		<div id="yin">
+			<p id="pp">更改密码</p>
+			<input id="oldpwd" type="text" placeholder="请输入初始密码"><br/>
+			<input id="newpwd" type="password" placeholder="请输入新密码"><br/>
+			<input id="pwd"    type="password" placeholder="请重新输入新密码"><br/>
+			<button onclick="changepwd()">更改密码</button>
+		</div>
+	</section>
+</body>
+
+</html>
